@@ -14,7 +14,7 @@ public class TicTacToeControl {
     private TicTacToeEvent.Player curPlayer = TicTacToeEvent.Player.X;
 
     public TicTacToeControl() {
-        this.event = new TicTacToeEvent();;
+        this.event = new TicTacToeEvent();
     }
 
     public TicTacToeControl(final TicTacToeEvent event) {

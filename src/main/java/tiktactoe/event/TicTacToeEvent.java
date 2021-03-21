@@ -30,8 +30,6 @@ public class TicTacToeEvent {
     public void play(String input) throws InterruptedException {
         this.boardPlan = boardPlan;
 
-        curPlayer = (curPlayer == null || curPlayer.equals(Player.O)) ? Player.X : Player.O;
-        System.out.println("Player " + curPlayer + ":");
 
         if (input.isEmpty() || input.length() != 2) {
             throw new InputMismatchException();
@@ -45,6 +43,8 @@ public class TicTacToeEvent {
             if (!boardPlan[row][col].trim().isEmpty()) {
                 throw new InputMismatchException();
             }
+            curPlayer = (curPlayer == null || curPlayer.equals(Player.O)) ? Player.X : Player.O;
+            System.out.println("Player " + curPlayer + ":");
 
             boardPlan[row][col] = curPlayer.name();
             switch (curPlayer) {
